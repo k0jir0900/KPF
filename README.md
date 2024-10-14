@@ -8,18 +8,18 @@
 
 ## Instalación
 
-1. Clona este repositorio o descarga los archivos necesarios.
+1. Clonar el repositorio:
+
+    ```bash
+    git clone https://github.com/k0jir0900/KPF.git
+    cd KPF
+    ```
 2. Instala las librerias faltantes con el siguiente comando:
 
     ```sh
     pip install -r requirements.txt
     ```
-3. Clonar el repositorio:
 
-    ```bash
-    https://github.com/k0jir0900/KPF.git
-    cd KPF
-    ```
 
 ## Uso
 
