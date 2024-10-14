@@ -62,12 +62,6 @@ Searching kernel: 3.10.0-1160.119.1.el7.x86_64
 
 ### Busqueda de Kernel por listado :
 
-```sh
-python3 kernel_finder.py -f <archivo-kernel.txt>
-```
-
-### Busqueda de Kernel unico :
-
 info.txt
 ```sh
 3.10.0-1160.119.1.el7.x86_64
