@@ -48,15 +48,15 @@ Opciones:
 def validar_archivo_json(archivo_json):
     if not os.path.exists(archivo_json):
         print(f"Kernel database not found\n")
-        subprocess.run(['python3', 'data/kernel_scraper.py', '-o', archivo_json])
+            os.system('subprocess.run(['python', 'data/kernel_scraper.py', '-o', archivo_json])' if os.name == 'nt' else 'subprocess.run(['python3', 'data/kernel_scraper.py', '-o', archivo_json])')
+        #subprocess.run(['python3', 'data/kernel_scraper.py', '-o', archivo_json])
 
 def main():
     limpiar_pantalla()
 
-    banner = pyfiglet.figlet_format("Kernel Finder")
+    banner = pyfiglet.figlet_format("Kernel-debug Packet Finder")
     print(banner)
 
-    # Validar existencia del archivo JSON
     archivo_json = 'kernel_list.json'
     validar_archivo_json(archivo_json)
 
@@ -64,7 +64,6 @@ def main():
         mostrar_ayuda()
         return
 
-    # Validar si se está usando el flag -k
     if len(sys.argv) == 3 and sys.argv[1] == '-k':
         kernel_unico = sys.argv[2]
         resultados = buscar_texto_en_json(archivo_json, kernel_unico)
@@ -93,8 +92,6 @@ def main():
             print(f"| URL          | Not found")
             print("+--------------+----------------------------------------------------------------------------------------------------------------------- ")
 
-
-    # Validar si se está usando el flag -f
     elif len(sys.argv) == 3 and sys.argv[1] == '-f':
         archivo_kernels = sys.argv[2]
         kernels_a_buscar = leer_kernels_de_archivo(archivo_kernels)
