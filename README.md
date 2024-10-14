@@ -66,7 +66,6 @@ Searching kernel: 3.10.0-1160.119.1.el7.x86_64
 python3 kernel_finder.py -f <archivo-kernel.txt>
 ```
 
-## Ejemplos
 ### Busqueda de Kernel unico :
 
 info.txt
