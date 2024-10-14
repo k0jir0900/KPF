@@ -16,7 +16,7 @@ allowed_architectures = [
 ]
 
 exclude_words = [
-    "common"
+    'common'
 ]
 
 with open('data/kernel_repo.json', 'r') as file:
