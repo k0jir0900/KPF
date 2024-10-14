@@ -1,6 +1,6 @@
 {
     "debian": "Debian",
-    "centos": "CentOS",
+    "centos": "CentOS/RedHat",
     "ubuntu": "Ubuntu",
     "fedora": "Fedora",
     "archlinux": "Arch Linux",
