@@ -1,0 +1,10 @@
+{
+    "debian": "Debian",
+    "centos": "CentOS",
+    "ubuntu": "Ubuntu",
+    "fedora": "Fedora",
+    "archlinux": "Arch Linux",
+    "opensuse": "openSUSE",
+    "manjaro": "Manjaro",
+    "raspbian": "Raspbian"
+}
