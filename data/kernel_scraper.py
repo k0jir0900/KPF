@@ -54,15 +54,15 @@ def fetch_kernel_debuginfo(url, search_pattern, user_agent):
 
     kernel_files = []
 
-    for link in links:
-    href = link.get('href')
-    if href and search_pattern in href:
-        if any(arch in href for arch in allowed_architectures) and not any(word in href for word in exclude_words):
-            kernel_files.append({
-                "distribucion": get_distribution_from_url(url),
-                "kernel_name": href.split('/')[-1],
-                "url": url + href
-            })
+        for link in links:
+        href = link.get('href')
+        if href and search_pattern in href:
+            if any(arch in href for arch in allowed_architectures) and not any(word in href for word in exclude_words):
+                kernel_files.append({
+                    "distribucion": get_distribution_from_url(url),
+                    "kernel_name": href.split('/')[-1],
+                    "url": url + href
+                })
 
     return kernel_files
 
