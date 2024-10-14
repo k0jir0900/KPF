@@ -53,8 +53,9 @@ def validar_archivo_json(archivo_json):
 def main():
     limpiar_pantalla()
 
-    banner = pyfiglet.figlet_format("Kernel-debug Packet Finder")
+    banner = pyfiglet.figlet_format("KPF")
     print(banner)
+    print(Kernel-debug Packet Finder)
 
     archivo_json = 'kernel_list.json'
     validar_archivo_json(archivo_json)
