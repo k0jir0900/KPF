@@ -48,8 +48,7 @@ Opciones:
 def validar_archivo_json(archivo_json):
     if not os.path.exists(archivo_json):
         print(f"Kernel database not found\n")
-            os.system('subprocess.run(['python', 'data/kernel_scraper.py', '-o', archivo_json])' if os.name == 'nt' else 'subprocess.run(['python3', 'data/kernel_scraper.py', '-o', archivo_json])')
-        #subprocess.run(['python3', 'data/kernel_scraper.py', '-o', archivo_json])
+        subprocess.run(['python3', 'data/kernel_scraper.py', '-o', archivo_json])
 
 def main():
     limpiar_pantalla()
