@@ -9,6 +9,7 @@
     ,"http://debuginfo.centos.org/6/i386/":"kernel-debuginfo-"
     ,"http://debuginfo.centos.org/7/i386/":"kernel-debuginfo-"
     ,"http://ddebs.ubuntu.com/pool/main/l/linux/":"linux-image-unsigned-"
+    #,"http://old-releases.ubuntu.com/ubuntu/pool/main/l/linux/":"linux-image-unsigned-"
     ,"https://packages.debian.org/stable/kernel/":"linux-image-"
     ,"https://packages.debian.org/buster/kernel/":"linux-image-"
     ,"https://packages.debian.org/bullseye/kernel/":"linux-image-"
