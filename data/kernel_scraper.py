@@ -3,10 +3,8 @@ from bs4 import BeautifulSoup
 import json
 import argparse
 from tqdm import tqdm
-import pyfiglet
 import os
 from urllib.parse import urlparse
-from tabulate import tabulate
 
 user_agent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36 Edg/114.0.1823.51'
 
@@ -15,6 +13,10 @@ allowed_architectures = [
     ,'x86'
     ,'amd64'
     ,'x86_64'
+]
+
+exclude_words = [
+    "common"
 ]
 
 with open('data/kernel_repo.json', 'r') as file:
@@ -53,15 +55,14 @@ def fetch_kernel_debuginfo(url, search_pattern, user_agent):
     kernel_files = []
 
     for link in links:
-        href = link.get('href')
-        if href and search_pattern in href:
-            if any(arch in href for arch in allowed_architectures):
-                kernel_files.append({
-                    "distribucion": get_distribution_from_url(url)
-                    ,"kernel_name": href.split('/')[-1]
-                    ,"url": url + href
-
-                })
+    href = link.get('href')
+    if href and search_pattern in href:
+        if any(arch in href for arch in allowed_architectures) and not any(word in href for word in exclude_words):
+            kernel_files.append({
+                "distribucion": get_distribution_from_url(url),
+                "kernel_name": href.split('/')[-1],
+                "url": url + href
+            })
 
     return kernel_files
 
