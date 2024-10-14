@@ -55,7 +55,7 @@ def main():
 
     banner = pyfiglet.figlet_format("KPF")
     print(banner)
-    print(Kernel-debug Packet Finder)
+    print(f"Kernel-debug Packet Finder\n")
 
     archivo_json = 'kernel_list.json'
     validar_archivo_json(archivo_json)
