@@ -54,7 +54,7 @@ def fetch_kernel_debuginfo(url, search_pattern, user_agent):
 
     kernel_files = []
 
-        for link in links:
+    for link in links:
         href = link.get('href')
         if href and search_pattern in href:
             if any(arch in href for arch in allowed_architectures) and not any(word in href for word in exclude_words):
